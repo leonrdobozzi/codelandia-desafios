@@ -1,0 +1,151 @@
+@import "variables";
+@import "mixins";
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../font/Inter-Medium.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "LexendDeca";
+  src: url("../font/LexendDeca-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white-200;
+}
+
+.container {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.hero {
+  background: $gradient-default;
+  padding: 41px 0;
+  header {
+    width: 100%;
+    @include flexCenterBetween;
+    padding-bottom: 73px;
+    h1 {
+      color: $white;
+      font-family: "Inter-Medium", sans-serif;
+    }
+    p {
+      color: $white;
+      font-family: "Inter-Medium", sans-serif;
+    }
+  }
+  .search {
+    input {
+      width: 100%;
+      padding: 20px 64px;
+      background: #ffffff20;
+      backdrop-filter: blur(25px);
+      border: none;
+      outline: none;
+      color: $white;
+      font-size: 18px;
+      border-radius: 5px;
+      background: {
+        image: url("../image/search.svg");
+        repeat: no-repeat;
+        position: 20px center;
+      }
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
+}
+
+.posts {
+  height: 100%;
+  padding: 50px 0;
+  .post {
+    background-color: $white;
+    padding: 25px;
+    border-radius: 5px;
+    margin: 50px 0;
+    .header {
+      @include flexCenterBetween;
+      .date {
+        font-size: 16px;
+        color: $gray;
+        font-family: "LexendDeca", sans-serif;
+      }
+
+      .heart {
+        .fillHeart {
+          opacity: 0;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+    }
+    .post-body {
+      .title {
+        font-size: 18px;
+        margin: 22px 0 8px;
+        font-family: "LexendDeca", sans-serif;
+      }
+      .text {
+        font-family: "LexendDeca", sans-serif;
+        font-size: 14px;
+        line-height: 32px;
+        color: $gray;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .posts {
+    .post {
+      margin: 50px 0;
+      .header {
+        .date {
+          font-size: 16px;
+        }
+      }
+      .post-body {
+        .title {
+          font-size: 26px;
+        }
+        .text {
+          font-size: 18px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
