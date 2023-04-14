@@ -10,7 +10,7 @@ export const HomeLayout = () => {
 
   const onScroll = () => setOffset(window.pageYOffset);
   window.removeEventListener("scroll", onScroll);
-
+  window.addEventListener("scroll", onScroll, { passive: true });
   return (
     <div className={styles.background}>
       <section
