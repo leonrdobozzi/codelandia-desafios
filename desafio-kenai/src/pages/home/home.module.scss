@@ -1,0 +1,9 @@
+.background {
+  background: url("../../assets/mario.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .container {
+    padding: 40px 48px;
+  }
+}

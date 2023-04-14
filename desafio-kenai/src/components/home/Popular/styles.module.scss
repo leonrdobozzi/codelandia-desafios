@@ -1,0 +1,23 @@
+.popular {
+  margin-top: 123px;
+  h3 {
+    font-family: "OpenSans", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    margin-bottom: 42px;
+    &:after {
+      content: "";
+      width: 100px;
+      height: 1.5px;
+      background: #ffa634;
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+    }
+  }
+  .cards {
+    display: flex;
+  }
+}

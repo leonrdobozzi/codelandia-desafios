@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Mukta";
+  src: url("../assets/font/Mukta-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../assets/font/OpenSans-Light.ttf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../assets/font/OpenSans-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../assets/font/OpenSans-SemiBold.ttf");
+  font-weight: 600;
+}

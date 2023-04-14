@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      list-style: none;
+      margin: 0 40px;
+      color: #fff;
+      font-family: "OpenSans", sans-serif;
+      font-weight: 600;
+    }
+  }
+}
