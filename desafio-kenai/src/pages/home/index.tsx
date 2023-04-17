@@ -4,6 +4,7 @@ import styles from "./home.module.scss";
 import { Header } from "../../components/home/Header";
 import { Highlights } from "../../components/home/Highlights";
 import { Popular } from "../../components/home/Popular";
+import { Footer } from "../../components/home/Footer";
 
 export const HomeLayout = () => {
   const [offset, setOffset] = useState(0);
@@ -13,14 +14,17 @@ export const HomeLayout = () => {
   window.addEventListener("scroll", onScroll, { passive: true });
   return (
     <div className={styles.background}>
-      <section
+      <div
+        className={styles.blur}
         style={{ backdropFilter: `blur(${offset / 8}px)` }}
-        className={styles.container}
       >
-        <Header />
-        <Highlights />
-        <Popular />
-      </section>
+        <section className={styles.container}>
+          <Header />
+          <Highlights />
+          <Popular />
+          <Footer />
+        </section>
+      </div>
     </div>
   );
 };

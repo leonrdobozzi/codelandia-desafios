@@ -21,35 +21,55 @@
   h2 {
     color: #fff;
     font-family: "OpenSans", sans-serif;
-    font-size: 56px;
+    font-size: 26px;
     margin: 26px 0;
   }
 
   .description {
-    font-size: 20px;
+    font-size: 14px;
     color: #fff;
     font-family: "OpenSans", sans-serif;
-    width: 40%;
-    margin-bottom: 73px;
-    line-height: 28px;
+    width: 100%;
+    margin-bottom: 33px;
+    line-height: 16px;
   }
 
   button {
     color: #181818;
     background: #ffa634;
     border-radius: 4px;
+    width: 100%;
     font-family: "OpenSans", sans-serif;
     font-weight: 600;
-    font-size: 24px;
-    padding: 12px 64px;
+    font-size: 16px;
+    padding: 10px 54px;
     outline: none;
     border: none;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out;
-    &:hover {
-      color: #ffa634;
-      background: #181818;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .highlights {
+    h2 {
+      font-size: 56px;
+    }
+
+    .description {
+      font-size: 20px;
+      line-height: 28px;
+      width: 40%;
+    }
+
+    button {
+      width: initial;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: #ffa634;
+        background: #181818;
+      }
     }
   }
 }
