@@ -1,0 +1,28 @@
+import React, { useEffect, useState } from "react";
+
+import styles from "./styles.module.scss";
+
+interface IUser {
+  image: string;
+  name: string;
+}
+
+export const User = ({ image, name }: IUser) => {
+  const [profile, setProfile] = useState(image);
+  useEffect(() => {
+    localStorage.setItem("profile", profile);
+  }, [profile]);
+
+  return (
+    <div
+      onClick={() => {
+        setProfile(image);
+        window.location.href = "/home";
+      }}
+      className={styles.user}
+    >
+      <img src={image} alt="" />
+      <h4>{name}</h4>
+    </div>
+  );
+};

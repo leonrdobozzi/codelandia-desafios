@@ -1,0 +1,26 @@
+.user {
+  margin-bottom: 34px;
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  h4 {
+    color: #fff;
+    font-family: "OpenSans", sans-serif;
+    font-size: 18px;
+    margin: 26px auto 0;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .user {
+    margin: 0 68px 138px;
+    h4 {
+      font-size: 32px;
+      margin: 40px auto 0;
+      text-align: center;
+    }
+  }
+}

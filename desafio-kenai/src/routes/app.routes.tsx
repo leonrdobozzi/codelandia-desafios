@@ -5,8 +5,8 @@ import { Profiles } from "../pages/profiles";
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/profiles" element={<Profiles />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Profiles />} />
     </Routes>
   );
 };

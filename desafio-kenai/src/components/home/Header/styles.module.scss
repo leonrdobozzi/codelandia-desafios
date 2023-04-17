@@ -31,6 +31,12 @@
         color: #fff;
         font-family: "OpenSans", sans-serif;
         font-weight: 600;
+        a {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
       }
     }
 

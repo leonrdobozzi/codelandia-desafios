@@ -1,0 +1,87 @@
+.profiles {
+  padding: 24px;
+  min-height: 100vh;
+  background: #09090b;
+  header {
+    display: flex;
+    justify-content: space-between;
+    img {
+      margin: 0 auto 80px;
+    }
+    p {
+      display: none;
+    }
+  }
+
+  .title {
+    color: #fff;
+    text-align: center;
+    font-family: "OpenSans", sans-serif;
+    font-size: 20px;
+  }
+
+  .using {
+    color: #fff;
+    text-align: center;
+    font-family: "OpenSans", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    margin: 16px 0 48px;
+  }
+
+  button {
+    width: 100%;
+    background: #181818;
+    padding: 16px 40px;
+    color: #fff;
+    font-family: "OpenSans", sans-serif;
+    font-size: 16px;
+    border: none;
+    margin-top: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .profiles {
+    header {
+      align-items: center;
+      margin-bottom: 78px;
+      img {
+        margin: 0;
+      }
+      p {
+        display: block;
+        color: #fff;
+        font-family: "OpenSans", sans-serif;
+        font-weight: 200;
+        font-size: 32px;
+      }
+    }
+
+    .title {
+      font-size: 64px;
+    }
+
+    .using {
+      font-size: 40px;
+    }
+
+    .users {
+      margin-top: 161px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      width: initial;
+      padding: 16px 40px;
+      font-size: 20px;
+      margin: 0 auto;
+      display: block;
+      cursor: pointer;
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+}
