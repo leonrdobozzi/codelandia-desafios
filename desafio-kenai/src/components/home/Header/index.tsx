@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Logo from "../../../assets/logo.png";
 import Search from "../../../assets/search.svg";
@@ -12,11 +12,6 @@ type MenuContextType = "open" | "closed";
 
 export const Header = () => {
   const [menu, setMenu] = useState<MenuContextType>("closed");
-
-  useEffect(() => {
-    console.log(menu);
-  }, [menu]);
-
   return (
     <header className={styles.header}>
       <img src={Logo} alt="" />
