@@ -26,7 +26,9 @@ export const Header = () => {
             <img src={Notification} alt="" />
           </li>
           <li>
-            <img src={User} alt="" />
+            <a href="/profiles">
+              <img src={User} alt="" />
+            </a>
           </li>
         </ul>
         <img

@@ -6,7 +6,7 @@ import { Highlights } from "../../components/home/Highlights";
 import { Popular } from "../../components/home/Popular";
 import { Footer } from "../../components/home/Footer";
 
-export const HomeLayout = () => {
+export const Home = () => {
   const [offset, setOffset] = useState(0);
 
   const onScroll = () => setOffset(window.pageYOffset);
