@@ -7,6 +7,7 @@ import { User } from "../../components/profiles/User";
 import Profile from "../../assets/profile.png";
 import Profile2 from "../../assets/profile-2.png";
 import Profile3 from "../../assets/profile-3.png";
+import { Button } from "../../components/profiles/Button";
 
 export const Profiles = () => {
   const date = new Date();
@@ -34,11 +35,11 @@ export const Profiles = () => {
       <h1 className={styles.title}>Bem-vindo de volta ao Kenai</h1>
       <h3 className={styles.using}>Quem está usando?</h3>
       <div className={styles.users}>
-        <User image={Profile} name="Leo" />
-        <User image={Profile2} name="Renata" />
-        <User image={Profile3} name="Collin" />
+        <User image={Profile} name="U1" />
+        <User image={Profile2} name="U2" />
+        <User image={Profile3} name="U3" />
       </div>
-      <button>Adicionar perfil</button>
+      <Button />
     </section>
   );
 };

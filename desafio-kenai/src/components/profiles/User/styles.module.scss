@@ -1,5 +1,9 @@
 .user {
   margin-bottom: 34px;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(1.4);
+  }
   img {
     margin: 0 auto;
     display: block;

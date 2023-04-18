@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import styles from "./styles.module.scss";
 
 import Star from "../../../assets/white-star.svg";
@@ -15,15 +15,15 @@ export const Card = ({ background, title, gender }: ICard) => {
   const [stars, setStars] = useState(0);
   const [clickStars, setClickStars] = useState(0);
 
-  const starsArray: any = [];
+  const starsArray: ReactElement[] = [];
 
   for (let i = 0; i < 5; i++) {
     starsArray.push(
       <img
         key={i}
         onMouseEnter={() => (stars !== i ? setStars(i) : stars)}
-        onClick={() => setClickStars(i)}
-        src={(stars >= i && stars >= 0) || clickStars >= i ? StarYellow : Star}
+        onClick={() => setClickStars(i + 1)}
+        src={(stars >= i && stars >= 0) || clickStars > i ? StarYellow : Star}
         alt=""
       />,
     );

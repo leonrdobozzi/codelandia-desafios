@@ -5,8 +5,12 @@ import { Profiles } from "../pages/profiles";
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/home" element={<Home />} />
-      <Route path="/" element={<Profiles />} />
+      <Route
+        path="/"
+        element={
+          localStorage.getItem("logged") === "true" ? <Home /> : <Profiles />
+        }
+      />
     </Routes>
   );
 };

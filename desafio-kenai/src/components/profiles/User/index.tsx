@@ -8,16 +8,23 @@ interface IUser {
 }
 
 export const User = ({ image, name }: IUser) => {
-  const [profile, setProfile] = useState(image);
+  const [profile, setProfile] = useState("");
+  const [logged, setLogged] = useState(false);
+
   useEffect(() => {
     localStorage.setItem("profile", profile);
   }, [profile]);
+
+  useEffect(() => {
+    localStorage.setItem("logged", String(logged));
+  }, [logged]);
 
   return (
     <div
       onClick={() => {
         setProfile(image);
-        window.location.href = "/home";
+        setLogged(true);
+        window.location.href = "/";
       }}
       className={styles.user}
     >

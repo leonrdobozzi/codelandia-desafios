@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Logo from "../../../assets/logo.png";
 import Search from "../../../assets/search.svg";
 import Notification from "../../../assets/notification.svg";
-import User from "../../../assets/user.svg";
 import Hamburguer from "../../../assets/hamburguer.svg";
 
 import styles from "./styles.module.scss";
@@ -27,13 +26,21 @@ export const Header = () => {
           <li>
             <img src={Search} alt="" />
           </li>
-          <li>Inicio</li>
-          <li>Minha lista</li>
+
+          <a href="#inicio">
+            <li>Inicio</li>
+          </a>
+          <a href="#popular">
+            <li>Populares</li>
+          </a>
           <li>
             <img src={Notification} alt="" />
           </li>
           <li>
-            <a href="/">
+            <a
+              onClick={() => localStorage.setItem("logged", String("false"))}
+              href="/"
+            >
               <img src={String(user)} alt="" />
             </a>
           </li>
@@ -51,10 +58,14 @@ export const Header = () => {
           left: `${menu === "closed" ? "-150%" : "0"}`,
         }}
       >
-        <h1 onClick={() => setMenu(menu === "open" ? "closed" : "open")}>
-          SAIR
-        </h1>
-        <p>tem nada aqui</p>
+        <h1 onClick={() => setMenu(menu === "open" ? "closed" : "open")}>X</h1>
+        <a
+          onClick={() => localStorage.setItem("logged", String("false"))}
+          href="/"
+        >
+          <img src={String(user)} alt="" />
+          <p>Trocar de perfil</p>
+        </a>
       </div>
     </header>
   );

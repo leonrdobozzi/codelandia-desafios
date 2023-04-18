@@ -19,6 +19,7 @@
   }
   .cards {
     display: flex;
+    justify-content: space-between;
     overflow: auto;
     scroll-snap-type: x mandatory;
   }
