@@ -52,6 +52,7 @@
         text-decoration: none;
       }
       li {
+        cursor: pointer;
         list-style: none;
         margin: 0 20px;
         color: #fff;
@@ -64,6 +65,41 @@
           }
         }
       }
+
+      .notifies {
+        position: relative;
+        img {
+          &:hover {
+            animation: shake 0.2s 4;
+          }
+        }
+        .notifications {
+          background: #18181895;
+          position: absolute;
+          width: 300px;
+          left: -50%;
+          top: calc(100% + 30px);
+          transform: translate(-50%, 0);
+          border-radius: 10px;
+          padding: 15px;
+          &:after {
+            content: "";
+            width: 30px;
+            height: 25px;
+            position: absolute;
+            background: #18181895;
+            right: 103px;
+            bottom: calc(100%);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          }
+          .notification {
+            padding: 10px;
+            background: #292929;
+            margin: 10px 0;
+            border-radius: 10px;
+          }
+        }
+      }
     }
 
     .menu {
@@ -72,5 +108,23 @@
     .hamburguer {
       display: none;
     }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(7deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

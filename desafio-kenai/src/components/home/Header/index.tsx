@@ -13,6 +13,7 @@ type UserContextType = string | null;
 export const Header = () => {
   const [menu, setMenu] = useState<MenuContextType>("closed");
   const [user, setUser] = useState<UserContextType>();
+  const [notification, setNotification] = useState(false);
 
   useEffect(() => {
     setUser(localStorage.getItem("profile"));
@@ -33,8 +34,26 @@ export const Header = () => {
           <a href="#popular">
             <li>Populares</li>
           </a>
-          <li>
-            <img src={Notification} alt="" />
+          <li className={styles.notifies}>
+            <img
+              onClick={() => setNotification(!notification)}
+              src={Notification}
+              alt=""
+            />
+            <div
+              style={{ display: `${notification ? "block" : "none"}` }}
+              className={styles.notifications}
+            >
+              <div className={styles.notification}>
+                <p>Lorem ipsum dolor sit amet!</p>
+              </div>
+              <div className={styles.notification}>
+                <p>Lorem ipsum dolor sit amet!</p>
+              </div>
+              <div className={styles.notification}>
+                <p>Lorem ipsum dolor sit amet!</p>
+              </div>
+            </div>
           </li>
           <li>
             <a
