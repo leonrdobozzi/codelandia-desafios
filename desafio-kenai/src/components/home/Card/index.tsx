@@ -23,7 +23,7 @@ export const Card = ({ background, title, gender }: ICard) => {
         key={i}
         onMouseEnter={() => (stars !== i ? setStars(i) : stars)}
         onClick={() => setClickStars(i + 1)}
-        src={(stars >= i && stars >= 0) || clickStars > i ? StarYellow : Star}
+        src={(stars >= i && stars > 0) || clickStars > i ? StarYellow : Star}
         alt=""
       />,
     );
