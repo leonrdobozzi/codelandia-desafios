@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GTE";
+  src: url("../assets/font/GTEestiProDisplay-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GTE";
+  src: url("../assets/font/GTEestiProDisplay-Medium.ttf");
+  font-weight: 500;
+}
+
+.app {
+  background: url("../assets/images/wallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}

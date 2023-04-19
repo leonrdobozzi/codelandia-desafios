@@ -1,0 +1,36 @@
+.main {
+  padding: 150px 28px 32px;
+  width: 100%;
+  .logo {
+    width: 140px;
+    height: 50px;
+  }
+  p {
+    color: #c0c0c0;
+    font-family: "GTE", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin: 16px 0 24px;
+  }
+
+  .bgControl {
+    display: flex;
+    align-items: center;
+    p {
+      font-weight: 400;
+      margin: 0 25px;
+    }
+    button {
+      background: #c0c0c0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+    }
+
+    button.active {
+      background: #fff;
+    }
+  }
+}
