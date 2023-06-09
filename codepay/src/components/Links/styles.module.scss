@@ -1,0 +1,28 @@
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 40px;
+  a {
+    text-decoration: none;
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 32px;
+    &:hover {
+      filter: brightness(1.6);
+    }
+  }
+  button {
+    padding: 16px 24px;
+    border-radius: 5px;
+    background: #2fbd6a;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}

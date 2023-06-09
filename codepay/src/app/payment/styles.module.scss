@@ -1,0 +1,45 @@
+.payment {
+  padding-bottom: 30px;
+  margin-top: 62px;
+  width: 90%;
+  .cardValidateData {
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+    align-items: center;
+    .expirate {
+      margin-top: 30px;
+      label {
+        margin-bottom: 20px;
+        color: #718096;
+        font-size: 16px;
+        font-weight: 500;
+        display: block;
+      }
+      .expirateInputs {
+        display: flex;
+        align-items: center;
+        .inputExpirate {
+          padding: 20px;
+          border-radius: 5px;
+          background: #f9f9f9;
+          color: #2d3748;
+          border: none;
+          width: 70px;
+          outline: none;
+          &:focus {
+            background: #f3f3f3;
+          }
+        }
+
+        .separator {
+          display: inline-block;
+          font-size: 30px;
+          margin: 0 10px;
+          color: #858585;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}

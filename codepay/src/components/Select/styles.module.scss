@@ -1,0 +1,20 @@
+.selectArea {
+  display: flex;
+  flex-direction: column;
+  label {
+    margin-bottom: 20px;
+    color: #718096;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .select {
+    padding: 20px;
+    min-width: 300px;
+    border: none;
+    background: #f9f9f9;
+    color: #2d3748;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+  }
+}

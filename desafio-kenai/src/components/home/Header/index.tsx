@@ -9,11 +9,13 @@ import styles from "./styles.module.scss";
 
 type MenuContextType = "open" | "closed";
 type UserContextType = string | null;
+type NotificationContextType = true | false;
 
 export const Header = () => {
   const [menu, setMenu] = useState<MenuContextType>("closed");
   const [user, setUser] = useState<UserContextType>();
-  const [notification, setNotification] = useState(false);
+  const [notification, setNotification] =
+    useState<NotificationContextType>(false);
 
   useEffect(() => {
     setUser(localStorage.getItem("profile"));
@@ -21,11 +23,11 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <img src={Logo} alt="" />
+      <img src={Logo} alt="Logotipo da plataform Kenai" />
       <nav>
         <ul>
           <li>
-            <img src={Search} alt="" />
+            <img src={Search} alt="Campo de pesquisa" />
           </li>
 
           <a href="#inicio">
@@ -60,7 +62,7 @@ export const Header = () => {
               onClick={() => localStorage.setItem("logged", String("false"))}
               href="/"
             >
-              <img src={String(user)} alt="" />
+              <img src={String(user)} alt="Foto do usuário" />
             </a>
           </li>
         </ul>
@@ -68,7 +70,7 @@ export const Header = () => {
           onClick={() => setMenu(menu === "open" ? "closed" : "open")}
           className={styles.hamburguer}
           src={Hamburguer}
-          alt=""
+          alt="Menu"
         />
       </nav>
       <div
@@ -82,7 +84,7 @@ export const Header = () => {
           onClick={() => localStorage.setItem("logged", String("false"))}
           href="/"
         >
-          <img src={String(user)} alt="" />
+          <img src={String(user)} alt="Foto do usuário" />
           <p>Trocar de perfil</p>
         </a>
       </div>
